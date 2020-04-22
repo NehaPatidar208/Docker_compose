@@ -1,0 +1,12 @@
+# docker-compose file when there is other file than Dockerfile
+
+version: '3.8'
+services:
+ app1:
+  image: nehap:day12v1
+  build:       # here we are removing current location that is .
+   context: .     #location of docker file
+   dockerfile: nehu.dockerfile  #filename
+  container_name: nehaday12c1
+  ports:
+   - "9991:80"
