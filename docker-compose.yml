@@ -1,0 +1,11 @@
+## when Dockerfile is there
+
+version: '3.8'
+services:
+ app1:
+  image: nehap:day12v1
+  build: .
+  container_name: nehaday12c1
+  ports:
+   - "9991:80"
+   
